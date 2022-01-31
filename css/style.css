@@ -35,7 +35,6 @@ p {
   margin: 0;
 }
 
-
 ul {
   list-style: none;
   padding: 0;
@@ -245,6 +244,8 @@ svg.main-link {
   transition-timing-function: var(--transition-timing-function);
 }
 .button-close {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -259,6 +260,10 @@ svg.main-link {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
+.button-close:hover .link-icon {
+  fill: var(--accent-color);
+}
+
 .modal-title {
   font-family: Roboto;
   font-style: normal;
@@ -270,7 +275,16 @@ svg.main-link {
   color: #212121;
   margin-bottom: 30px;
 }
+.form-box {
+  margin-bottom: 10px;
+}
+.form-box:last-child {
+  margin-bottom: 20px;
+}
+
 .form-lebel {
+  display: block;
+  margin-bottom: 4px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -285,13 +299,16 @@ svg.main-link {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 10px;
   cursor: pointer;
   padding-left: 42px;
-  transition: 250ms;
+  transition: 250ms var(--transition-timing-function);
 }
 .form-input:hover {
   border-color: var(--accent-color);
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
 }
 .input-text:hover .input-icon {
   fill: var(--accent-color);
@@ -318,6 +335,10 @@ svg.main-link {
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
+}
+.form-coment:focus {
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
 }
 .form-coment:hover {
   border-color: var(--accent-color);
@@ -874,7 +895,6 @@ svg.main-link {
 /* рассылка */
 .mail-form {
   margin-left: 93px;
-
 }
 .footer-sub {
   font-weight: 700;
@@ -885,6 +905,11 @@ svg.main-link {
   color: #ffffff;
   margin-bottom: 20px;
 }
+.sub {
+  display: flex;
+  align-items: center;
+}
+
 .mail-input {
   width: 358px;
   min-height: 50px;
